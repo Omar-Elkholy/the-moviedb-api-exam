@@ -1,0 +1,320 @@
+body {
+    background-color: #000000f2;
+}
+
+
+
+#hint {
+
+    color: tomato;
+    font-size: 16px;
+    display: none;
+}
+
+/* Start aside Section */
+
+aside {
+    position: fixed;
+    left: -220px;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.aside-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px;
+    padding: 0 20px 30px;
+    background-color: #000;
+    height: 100%;
+}
+
+.aside-content ul {
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 12px;
+}
+
+.aside-content ul li {
+    padding-top: 22px;
+}
+
+.aside-content ul li a {
+    padding: 12px 0;
+}
+
+.aside-content p {
+    color: #999;
+}
+
+.aside-content a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .4s;
+}
+
+.aside-content a.active {
+    color: tomato;
+    font-weight: bold;
+    transition: all .1s;
+
+}
+
+.aside-links {
+    overflow: hidden;
+    height: 70vh;
+}
+
+.aside-links ul li {
+    margin-top: 70vh;
+}
+
+.aside-links ul li a {
+    font-size: 16px;
+}
+
+.aside-icons p, .aside-icons i {
+    font-size: 15px;
+}
+
+.social-icons {
+    margin-bottom: 14px;
+}
+
+.aside-content i {
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.aside-content a:hover {
+    color: tomato;
+}
+
+.aside-tab {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 18px 0;
+    left: 0;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    background-color: #f8f6f6;
+    cursor: pointer;
+}
+
+.aside-tab img {
+    height: 45px;
+}
+
+.tab-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+}
+
+.tab-settings {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 25px;
+}
+
+.tab-settings i {
+    padding-top: 16px;
+    transition: all .7s;
+}
+
+.tab-settings i:hover {
+    color: tomato;
+}
+
+/* End aside Section */
+
+
+/* Start Search Section */
+
+
+.form-control::placeholder {
+    font-size: 16px;
+}
+
+@media (max-width: 350px) {
+    .form-control::placeholder {
+        font-size: 12px;
+    }
+}
+
+
+
+.form-control, .form-control:focus {
+    background-color: #fff;
+    padding: 18px 16px;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    box-shadow: none;
+    color: #000;
+    font-size: 18px;
+}
+
+/* End Search Section */
+
+
+/* Start Movies Section */
+
+.movies, .search {
+    margin-left: 45px;
+}
+
+.movie-image {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.movie-image .image-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    padding: 0 10px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 1s;
+    background-color: rgba(250, 250, 250, .7);
+}
+
+.image-layer h2 {
+    font-size: 20px;
+    margin: 6px 0;
+    font-weight: bolder;
+}
+
+.image-layer p {
+    font-size: 16px;
+    margin: 4px 0;
+    font-weight: 500;
+}
+
+@media (max-width: 1400px) {
+    .image-layer h2 {
+        font-size: 14px;
+    }
+    .image-layer p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .image-layer h2 {
+        font-size: 12px;
+    }
+    .image-layer p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .image-layer h2 {
+        font-size: 14px;
+    }
+    .image-layer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .image-layer h2 {
+        font-size: 20px;
+    }
+    .image-layer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .image-layer h2 {
+        font-size: 14px;
+    }
+    .image-layer p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .image-layer h2 {
+        font-size: 11px;
+    }
+    .image-layer p {
+        font-size: 7px;
+    }
+}
+
+
+.movie-image:hover .image-layer {
+    top: 0;
+}
+
+
+/* End Movies Section */
+
+
+
+/* Start Contact Seciton */
+
+.contact .form-control {
+    padding: 16px 8px;
+    background-color: transparent;
+    color: rgba(250, 250, 250, .7);
+    font-size: 16px;
+}
+
+.contact .form-control::placeholder {
+    font-size: 16px;
+}
+
+@media (max-width: 350px) {
+    .contact .form-control::placeholder {
+        font-size: 12px;
+    }
+}
+
+.contact h2 {
+    color: #f8f9fa;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.contact .formHint {
+    font-size: 16px;
+    color: tomato;
+}
+
+#nameHint,
+#emailHint,
+#phoneHint,
+#ageHint,
+#passwordHint,
+#rePasswordHint {
+    display: none;
+}
+
+#submitBtn {
+    padding: 12px 20px;
+    font-size: 16px;
+
+}   
+
+
+
+
+/* Start Contact Seciton */

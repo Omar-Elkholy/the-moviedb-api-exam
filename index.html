@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
+    <title>TMDB Movies</title>
+
+    <!-- Adding Icon To Title Bar -->
+    <link rel="shortcut icon" href="images/TMDB.jpg" />
+
+    <!-- Linking Css Files-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- Start Sidebar Section -->
+    <aside>
+      <div class="aside-content container-fluid">
+        <div class="aside-links">
+          <ul>
+            <li>
+              <a class="active" id="nowPlaying" href="">Now Playing</a>
+            </li>
+
+            <li>
+              <a id="trending" href="">Trending</a>
+            </li>
+
+            <li>
+              <a id="popular" href="">Popular</a>
+            </li>
+
+            <li>
+              <a id="topRated" href="">Top Rated</a>
+            </li>
+
+            <li>
+              <a id="upComing" href="">Upcoming</a>
+            </li>
+            <li>
+              <a id="contactBtn" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="aside-icons">
+          <div class="social-icons">
+            <a href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fas fa-globe"></i>
+            </a>
+          </div>
+
+          <p>Copyright @ 2021 All Rights Reserved.</p>
+        </div>
+      </div>
+
+      <div class="aside-tab shadow">
+        <div class="tab-image">
+          <img src="images/logo.png" alt="" />
+        </div>
+
+        <div class="tab-icon">
+          <i id="tab-icon" class="fa fa-align-justify"></i>
+        </div>
+
+        <div class="tab-settings">
+          <i class="fas fa-globe"></i>
+          <i class="fas fa-share-alt"></i>
+        </div>
+      </div>
+    </aside>
+    <!-- End Sidebar Section -->
+
+
+
+    <!-- Start Search Section -->
+    <section class="search mt-5">
+      <div class="container w-75 mx-auto">
+        <div class="row">
+          <div class="col-sm-6 my-3">
+            <input id="searchApi" class="form-control" type="text" placeholder="Search For Movies">
+          </div>
+          <div class="col-sm-6 my-3">
+            <div class="search2 position-relative">
+              <input id="searchCollection" class="form-control" type="text" placeholder="Search in This Collection">
+              <p id="hint">Here i've tried to make a function that search after user stop typing, So don't think that search is slow:)</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- End Search Section -->
+
+    <!-- Start Movies Section -->
+
+    <section class="movies" id="movies">
+
+      <div class="container w-75 mx-auto">
+        <div class="row" id="moviesRow">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- End Movies Section -->
+
+
+    <!-- Start Contact Section -->
+
+    <section class="contact my-5 mx-5" id="contact">
+
+      <div class="container w-75 mx-auto">
+        <h2>Contact...</h2>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <input id="nameInput" class="form-control" type="text" placeholder="Enter Your Name">
+            <div id="nameHint" class="formHint">name [2-20] characters & starts with capital letter</div>
+          </div>
+          <div class="col-sm-6">
+              <input id="emailInp" class="form-control" type="text" placeholder="Enter Your Email">
+              <div id="emailHint" class="formHint">email format isn't correct</div>
+          </div>
+          <div class="col-sm-6">
+            <input id="phoneInp" class="form-control" type="text" placeholder="Enter Your Phone">
+            <div id="phoneHint" class="formHint">phone is invalid</div>
+
+          </div>
+          <div class="col-sm-6">
+            <input id="ageInp" class="form-control" type="text" placeholder="Enter Your Age">
+            <div id="ageHint" class="formHint">your age must be from 10 to 100</div>
+          </div>
+          <div class="col-sm-6">
+            <input id="passwordInp" class="form-control" type="text" placeholder="Enter Your Password">
+            <div id="passwordHint" class="formHint">
+              password contains: <br>
+                1- digits,<br>
+                2- upper case & lower case,<br>
+                3- special characters [@, $, #],<br>
+                4- at least 8 characters of the mentioned characters.
+              </div>
+
+          </div>
+          <div class="col-sm-6">
+            <input id="rePasswordInp" class="form-control" type="text" placeholder="Confirm Password">
+            <div id="rePasswordHint" class="formHint">these passwords didn't match</div>
+          </div>
+          
+        </div>
+        <button class="btn btn-outline-danger mt-3 disabled" id="submitBtn">Submit</button>
+
+      </div>
+    </section>
+
+    <!-- End Contact Section -->
+
+
+
+
+    <script src="js/External/jquery-3.6.0.min.js"></script>
+    <script src="js/External/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
